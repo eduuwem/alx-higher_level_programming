@@ -1,4 +1,4 @@
-#!/usr/in/python3
+#!/usr/bin/python3
 # Author - Tolulope Fakunle
 
 def print_last_digit(number):
