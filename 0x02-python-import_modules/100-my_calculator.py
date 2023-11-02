@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-     """"imports all functions from the file calculator_1.py."""
+     """"imports all functions from the files calculator_1.py."""
     import sys
     from calculator_1 import add, sub, mul, div
     argv = sys.argv[1:]
