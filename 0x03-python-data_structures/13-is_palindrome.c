@@ -7,7 +7,7 @@
  * Return: pointer to the first node in the new list
  */
 
-void reverse_listint(listint_t **head)
+void reverse_listint_recursive(listint_t **head)
 {
    listint_t *prev = NULL;
   listint_t *current = *head;
@@ -49,7 +49,7 @@ int is_palindrome(listint_t **head)
     }
   }
 
-  reverse_listint(&slow);
+  reverse_listint_recursive(&slow);
 
   dup = slow;
 
