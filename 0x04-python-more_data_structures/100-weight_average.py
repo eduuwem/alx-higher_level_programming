@@ -7,4 +7,4 @@ def weight_average(my_list=[]):
     number = sum(map(lambda n, m: n * m, values, weights))
     denominator = sum(weights)
 
-    return (number /denominator)
+    return (number/denominator)
