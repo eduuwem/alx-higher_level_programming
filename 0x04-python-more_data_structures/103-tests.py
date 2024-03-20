@@ -29,7 +29,7 @@ lib.print_python_list(l)
 l = ["Holberton"]
 lib.print_python_list(l)
 lib.print_python_bytes(l);
-julien@ubuntu:~/CPython$ python3 103-tests.py 
+julien@ubuntu:~/CPython$ python3 103-tests.py
 [.] bytes object info
   size: 5
   trying string: Hello
