@@ -3,6 +3,11 @@
 #include <listobject.h>
 #include <bytesobject.h>
 
+/**
+* print_python_bytes - Prints information about a Python bytes object
+* @p: Pointer to the PyObject representing the bytes object
+*/
+
 void print_python_bytes(PyObject *p)
 {
 	long int size;
@@ -29,22 +34,27 @@ void print_python_bytes(PyObject *p)
 	printf("\n");
 }
 
+/**
+* print_python_list - Prints information about a Python list object
+* @p: Pointer to the PyObject representing the list object
+*/
+
 void print_python_list(PyObject *p)
 {
-        long int size = PyList_Size(p);
-        int b;
-        PyListObject *list = (PyListObject *)p;
-        const char *type;
+	long int size = PyList_Size(p);
+	int b;
+	PyListObject *list = (PyListObject *)p;
+	const char *type;
 
-        printf("[*] Python list info\n");
-        printf("[*] Size of the Python List = %li\n", size);
-        printf("[*] Allocated = %li\n", list->allocated);
-        for (b = 0; b < size; b++)
-        {
-                type = (list->ob_item[b])->ob_type->tp_name;
+	printf("[*] Python list info\n");
+	printf("[*] Size of the Python List = %li\n", size);
+	printf("[*] Allocated = %li\n", list->allocated);
+	for (b = 0; b < size; b++)
+	{
+		type = (list->ob_item[b])->ob_type->tp_name;
 		printf("Element %i: %s\n", b, type);
-                if (!strcmp(type, "bytes"))
-                        print_python_bytes(list->ob_item[bb]);
-        }
+		if (!strcmp(type, "bytes"))
+			print_python_bytes(list->ob_item[bb]);
+	}
 }
 
